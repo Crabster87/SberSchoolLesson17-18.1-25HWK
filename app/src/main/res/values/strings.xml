@@ -1,0 +1,7 @@
+<resources>
+    <string name="app_name">SberSchoolLesson17HWK</string>
+    <string name="https_get_button">HttpsURLC GET</string>
+    <string name="https_post_button">HttpsURLC POST</string>
+    <string name="okhttp_get_button">OkHttp GET</string>
+    <string name="okhttp_post_button">OkHttp POST</string>
+</resources>

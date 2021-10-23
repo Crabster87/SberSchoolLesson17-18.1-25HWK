@@ -13,7 +13,7 @@ import io.reactivex.rxjava3.disposables.Disposable;
 public class MainActivity extends AppCompatActivity {
 
     private TextView contentView;
-    private final CompositeDisposable compositeDisposable = new CompositeDisposable();
+    private CompositeDisposable compositeDisposable = new CompositeDisposable();
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -41,6 +41,12 @@ public class MainActivity extends AppCompatActivity {
             });
             compositeDisposable.add(disposable);
         });
+    }
+
+    @Override
+    protected void onDestroy() {
+        super.onDestroy();
+        compositeDisposable = null;
     }
 
 }

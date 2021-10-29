@@ -1,4 +1,4 @@
-package crabster.rudakov.sberschoollesson17hwk;
+package crabster.rudakov.sberschoollesson17hwk.clientApi;
 
 import android.util.Log;
 
@@ -10,6 +10,8 @@ import java.io.OutputStreamWriter;
 import java.net.URL;
 
 import javax.net.ssl.HttpsURLConnection;
+
+import crabster.rudakov.sberschoollesson17hwk.Constants;
 
 public class HttpsURLConnectionApi extends Client {
 
@@ -29,7 +31,7 @@ public class HttpsURLConnectionApi extends Client {
 
             return getServerResponse(connection);
         } catch (Exception e) {
-            Log.e(Constants.TAG, Constants.REQUEST_FAULT, e);
+            Log.e(Constants.LOG_EXCEPTION_TAG, Constants.REQUEST_FAULT, e);
             return e.toString();
         } finally {
             if (connection != null) {
@@ -54,20 +56,20 @@ public class HttpsURLConnectionApi extends Client {
             connection.setConnectTimeout(Constants.CONNECT_TIMEOUT_DURATION);
             connection.setReadTimeout(Constants.READ_TIMEOUT_DURATION);
             connection.addRequestProperty(Constants.REQUEST_PROPERTY_KEY,
-                                          Constants.REQUEST_PROPERTY_VALUE);
+                    Constants.REQUEST_PROPERTY_VALUE);
             connection.setDoOutput(true);
 
             BufferedWriter writer = new BufferedWriter(new OutputStreamWriter(connection.getOutputStream()));
             writer.write(createRequestBody("Fresh Meat",
-                                          1200,
-                                       "Beef",
-                                     "Beef steaks",
-                                        "steak.image.com"));
+                    1200,
+                    "Beef",
+                    "Beef steaks",
+                    "steak.image.com"));
             writer.flush();
 
             return getServerResponse(connection);
         } catch (Exception e) {
-            Log.e(Constants.TAG, Constants.REQUEST_FAULT, e);
+            Log.e(Constants.LOG_EXCEPTION_TAG, Constants.REQUEST_FAULT, e);
             return e.toString();
         } finally {
             if (connection != null) {

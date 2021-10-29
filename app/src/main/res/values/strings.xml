@@ -4,4 +4,10 @@
     <string name="https_post_button">HttpsURLC POST</string>
     <string name="okhttp_get_button">OkHttp GET</string>
     <string name="okhttp_post_button">OkHttp POST</string>
+    <array name="colors" >
+        <item>DARK GRAY</item>
+        <item>RED</item>
+        <item>GREEN</item>
+        <item>MAGENTA</item>
+    </array>
 </resources>

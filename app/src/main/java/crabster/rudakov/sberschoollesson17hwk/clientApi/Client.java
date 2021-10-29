@@ -1,7 +1,9 @@
-package crabster.rudakov.sberschoollesson17hwk;
+package crabster.rudakov.sberschoollesson17hwk.clientApi;
 
 import com.squareup.moshi.JsonAdapter;
 import com.squareup.moshi.Moshi;
+
+import crabster.rudakov.sberschoollesson17hwk.Meat;
 
 public abstract class Client {
 

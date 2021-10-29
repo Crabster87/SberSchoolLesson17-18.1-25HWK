@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android"
+    android:title="PREFERENCES">
+    <CheckBoxPreference
+        android:defaultValue="false"
+        android:icon="@drawable/ic_baseline_dark_mode_24"
+        android:key="dark_theme"
+        android:title="DARK THEME" />
+    <SwitchPreference
+        android:defaultValue="false"
+        android:icon="@drawable/ic_baseline_cached_24"
+        android:key="cache_response"
+        android:summary="switch off / switch on"
+        android:title="CASH OKHTTP SERVER RESPONSE" />
+    <ListPreference
+        android:defaultValue="MAGENTA"
+        android:entries="@array/colors"
+        android:entryValues="@array/colors"
+        android:icon="@drawable/ic_baseline_filter_4_24"
+        android:key="color"
+        android:summary="choose from the list"
+        android:title="BACKGROUND COLOR" />
+</PreferenceScreen>
